@@ -1,0 +1,59 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <title>Registro Usuarios Demo Quick Hekp SAS</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/signin.css' %}" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="row justify-content-md-center">
+          <div class="col-md-6">
+              <div class="well well-sm">
+                <form method="post" action=".">
+                  <img class="rounded mx-auto d-block" src="{% static 'img/quick.png' %}" alt="" width="120" height="120">
+                  <h3 class="text-center">Registrar Nuevo Usuario</h3>
+                  <div class="card">
+                    <!-- card-body -->
+                    <div class="card-body">
+                      {% csrf_token %}
+                
+                      <!-- form errors -->
+                      {% if form.errors %}
+                      <div class="alert alert-warning alert-dismissible">
+                        <h5><i class="icon fas fa-exclamation-triangle"></i> Error al grabar datos!</h5>
+                        <ul>
+                          {% for field in form %}
+                          {% for error in field.errors %}
+                          <li> {{ error }} </li>
+                          {% endfor %}
+                          {% endfor %}
+                        </ul>
+                      </div>
+                      {% endif %}
+                      <!-- /.form errors -->
+                
+                      {{ form.as_p }}
+                    </div>
+                    <!-- /.card-body -->
+                
+                    <!-- card-footer -->
+                    <div class="card-footer">
+                      <button class="btn btn-lg btn-warning btn-block" type="submit">Registrar</button>
+                      <div class="mt-2 mb-2 text-center text-muted">&copy; Quick Help SAS</div> 
+                    <!-- /.card-footer -->
+                  </div>
+                </form>
+              </div>
+          </div>
+      </div>
+    </div>
+  </body>
+</html>

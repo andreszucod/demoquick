@@ -24,3 +24,8 @@ STATICFILES_DIRS = [BASE_DIR.child('static'),]
 # definir la localizacion de los archivos media
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.child('media')
+
+# En la siguiente linea especificamos la pagina de inicio una ves el usuario se registra en la aplicacion
+LOGIN_URL = '/user/login/'
+LOGIN_REDIRECT_URL = '/home/'
+LOGOUT_REDIRECT_URL = '//'

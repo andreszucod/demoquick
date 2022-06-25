@@ -1,0 +1,25 @@
+.logoweb {
+    height: auto;
+    width: 120px;
+    padding-top: 0rem;
+}
+
+.logowebm {
+    height: 70px;
+    width: 150px;
+    float: right;
+    align-content: center !important;
+}
+
+.jumbotron{
+    margin-top: 0px;
+    background-size: cover;
+    background-color:#fdd403;
+    color: black;
+  }
+
+.navbar {
+    background-color: #E5EEFB !important;
+    height: 3rem;
+    color:red !important;
+}

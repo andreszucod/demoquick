@@ -29,7 +29,10 @@ BASE_APPS = (
 )
 
 # Lista aplicaciones propias del proyecto
-LOCAL_APPS = ()
+LOCAL_APPS = (
+    'apps.users',
+    'apps.home',
+)
 
 # Lista aplicaciones de terceros que se usen
 THIRD_APPS = ()
@@ -88,6 +91,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# Definir el modelo de usuarios creado
+AUTH_USER_MODEL = 'users.User'
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/

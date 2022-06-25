@@ -1,0 +1,62 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Pagina de Inicio">
+  <meta name="author" content="Ing. Andres M Zuluaga Quintero">
+
+  <title>Quick Help SAS</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" />
+
+  <link href="{% static 'css/index.css' %}" rel="stylesheet" />
+</head>
+
+
+<header>
+  </nav>
+  <nav class="navbar navbar-expand-md">
+    <a class="navbar-brand" href="#"></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+      aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+</header>
+
+<body>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="display-3">Quick Help SAS</h1>
+      </div>
+    </div>
+
+
+  <div class="container">
+    <!-- Example row of columns -->
+    <div class="row">
+      <div class="col-md-8">
+        <h2>1. Registro en el Sistema</h2>
+        <p><a class="btn btn-warning" href="{% url 'users_app:user-register'%}" role="button">Registrar &raquo;</a></p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <h2>2. Ingreso al sistema</h2>
+        <p><a class="btn btn-warning" href="{% url 'users_app:user-login'%}" role="button">Ingresar &raquo;</a></p>
+      </div>
+    </div>
+    
+  </div> <!-- /container -->
+
+  <!-- JQuery -->
+  <script src="{% static 'js/jquery-3.6.0.min.js' %}"></script>
+  <script src="{% static 'js/popper.min.js' %}"></script>
+  <script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
