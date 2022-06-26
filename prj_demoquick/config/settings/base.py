@@ -32,10 +32,15 @@ BASE_APPS = (
 LOCAL_APPS = (
     'apps.users',
     'apps.home',
+    'apps.clients',
+    'apps.products',
+    'apps.bills',
 )
 
 # Lista aplicaciones de terceros que se usen
-THIRD_APPS = ()
+THIRD_APPS = (
+    'rest_framework',
+)
 
 # Concatena las apps del proyecto
 INSTALLED_APPS = BASE_APPS + LOCAL_APPS + THIRD_APPS
