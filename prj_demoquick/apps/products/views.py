@@ -1,4 +1,3 @@
-
 # Habiliatmos el DRF
 from rest_framework.generics import (
     ListAPIView,
@@ -10,18 +9,27 @@ from rest_framework.generics import (
     # Modificar o Actualizar un registro con los campos en blanco
     UpdateAPIView,
     # Modificar o Actualizar un registro trae los datos
-    RetrieveUpdateAPIView
-
+    RetrieveUpdateAPIView,
     )
 
+# Importar la libreria de permisos para la validacion del JWT
+from rest_framework.permissions import IsAuthenticated
+
+# Importar el serializador a la vista
 from .serializers import ProductSerializers
 
+# Importar el modelo
 from .models import Products
+
+#---------------------------------------------------------------------
 
 # Clase para listar elementos de una Api
 class ProductListView(ListAPIView):
     # Serializador a usar
     serializer_class = ProductSerializers
+    # Valida que el usuario este autenticado para ingresar a la vista
+    # Se pueden generar los permisos localmente o de manera global en el base.py
+    permission_classes = (IsAuthenticated,)
 
     def get_queryset(self):
         return Products.objects.all()
@@ -42,14 +50,6 @@ class ProductDetailView(RetrieveAPIView):
 
 # Clase para borrar  un elemento en particular mediante una Api
 class ProductDeleteView(DestroyAPIView):
-    # Serializador a usar
-    serializer_class = ProductSerializers
-    # Consulta que trae o filtra los datos
-    queryset = Products.objects.all()
-
-
-# Clase para Actualizar  un elemento en particular mediante una Api sin los datos
-class ProductUpdateView(UpdateAPIView):
     # Serializador a usar
     serializer_class = ProductSerializers
     # Consulta que trae o filtra los datos

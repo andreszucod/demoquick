@@ -1,5 +1,7 @@
 from django.db import models
 
+#Importar el manager para las consultas ORM
+#from .managers import ProductsManager
 
 class Products(models.Model):
     id = models.AutoField(
@@ -17,7 +19,9 @@ class Products(models.Model):
         blank=True,
         verbose_name='Atributo 4')
 
-    
+    #Conectar el modelo con el manager
+    #objects: ProductsManager()
+
     class Meta:
       db_table = 'products'
       verbose_name_plural = "Productos"

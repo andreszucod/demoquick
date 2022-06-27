@@ -40,6 +40,10 @@ LOCAL_APPS = (
 # Lista aplicaciones de terceros que se usen
 THIRD_APPS = (
     'rest_framework',
+    # es un token ramdom basico normal, no contiene data, no es JWT
+    'rest_framework.authtoken',
+    # Adiciona la libreria de JWT
+    'rest_framework_simplejwt',
 )
 
 # Concatena las apps del proyecto
@@ -95,6 +99,18 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+#Define las configuraciones globales 
+REST_FRAMEWORK = {
+    # Define el metodo de autenticacion por token a usar
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ],
+    # Define la proteccion de las vistas de manera global
+    # 'DEFAULT_PERMISSION_CLASSES': (
+    #     'rest_framework.permissions.IsAuthenticated',
+    # )
+}
 
 # Definir el modelo de usuarios creado
 AUTH_USER_MODEL = 'users.User'

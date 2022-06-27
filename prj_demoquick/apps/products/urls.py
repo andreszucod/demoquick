@@ -1,4 +1,4 @@
-from django.urls import path, re_path
+from django.urls import path
 
 from . import views
 
@@ -22,12 +22,7 @@ urlpatterns = [
         views.ProductDeleteView.as_view(),
     ),
     path(
-        'api/products/update/<pk>/',
-        views.ProductUpdateView.as_view(),
-    ),
-    path(
         'api/products/modify/<pk>/',
         views.ProductRetrieveUpdateView.as_view(),
-    )
-
+    ),
 ]
