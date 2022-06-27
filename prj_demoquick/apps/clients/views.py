@@ -1,3 +1,9 @@
+#Importar librerias para generar el csv
+import csv
+from urllib import response
+from django.http import HttpResponse
+from rest_framework.views import APIView
+
 # Habiliatmos el DRF
 from rest_framework.generics import (
     ListAPIView,
@@ -62,3 +68,22 @@ class ClientRetrieveUpdateView(RetrieveUpdateAPIView):
     serializer_class = ClientSerializers
     # Consulta que trae o filtra los datos
     queryset = Clients.objects.all()
+
+# Generar la salida CSV
+class ExportCSVClients(APIView):
+    def get(self, request, *arg, **kwargs):
+        response = HttpResponse(content_type='text/csv')
+        response['Content-Disposition'] = 'attachmemt; filename="export.csv"'
+
+        writer = csv.writer(response)
+
+        for student in Clients.objects.all():
+            row = ','.join([
+                id,
+                document,
+                email,
+            ])
+
+            writer.writerow(row)
+        
+        return response

@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views
 
+from apps.clients.views import ExportCSVClients
+
 app_name = 'clients_apps'
 
 urlpatterns = [
@@ -24,5 +26,10 @@ urlpatterns = [
     path(
         'api/clients/modify/<pk>/',
         views.ClientRetrieveUpdateView.as_view(),
+    ),
+    path(
+        'clients_csv/', 
+        ExportCSVClients.as_view(), 
+        name='clients_csv_export'
     ),
 ]

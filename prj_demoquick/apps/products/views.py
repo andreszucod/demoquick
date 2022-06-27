@@ -15,6 +15,13 @@ from rest_framework.generics import (
 # Importar la libreria de permisos para la validacion del JWT
 from rest_framework.permissions import IsAuthenticated
 
+# Importar decorador para la funcion de consulta 
+from django.contrib.auth.decorators import login_required
+# Importar el serializador para las funciones
+from django.core.serializers import serialize
+from django.db.models.query import QuerySet
+from django.http import HttpResponse
+
 # Importar el serializador a la vista
 from .serializers import ProductSerializers
 
@@ -62,3 +69,17 @@ class ProductRetrieveUpdateView(RetrieveUpdateAPIView):
     serializer_class = ProductSerializers
     # Consulta que trae o filtra los datos
     queryset = Products.objects.all()
+
+
+# Definicion de funcion para construir una consulta a productos
+@login_required
+def products_datasets(request):
+	data_products = serialize('json', 
+                                Products.objects.all(),
+                                fields=(
+                                        'id',
+                                        'name',
+                                        'descripcion',
+                                        'atributo4',
+                                        ))
+	return HttpResponse(data_products,content_type='json')

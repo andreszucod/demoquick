@@ -2,6 +2,8 @@ from django.urls import path
 
 from . import views
 
+from apps.products.views import products_datasets
+
 app_name = 'products_apps'
 
 urlpatterns = [
@@ -24,5 +26,10 @@ urlpatterns = [
     path(
         'api/products/modify/<pk>/',
         views.ProductRetrieveUpdateView.as_view(),
+    ),
+    path(
+        'product-orm/', 
+        products_datasets, 
+        name='json-product-orm'
     ),
 ]

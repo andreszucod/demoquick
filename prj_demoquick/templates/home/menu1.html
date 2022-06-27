@@ -25,14 +25,19 @@
                     <h1 class="text-center">Quick Help SAS</h1>
                     <h4 class="text-center">Seleccione Funcionalidad</h4>
                     <div class="card">
-                    </div>
+                    
                       <!-- /.card-body -->
-                  
+                      <div>
+                        <a href="{% url 'products_apps:json-product-orm' %}" class="list-group-item list-group-item-action">
+                         Consulta ORM Products - URL/Json
+                      </a>
+                      </div>
                       <a href="{% url 'users_app:user-logout' %}" class="btn btn-warning btn-block" role="button" aria-pressed="true">Salir</a>
                       <!-- card-footer -->
                       <div class="card-footer">
                         <div class="mt-2 mb-2 text-center text-muted">&copy; Quick Help SAS</div> 
-                      <!-- /.card-footer -->
+                      </div>
+                        <!-- /.card-footer -->
 
                     </div>
                   </form>
