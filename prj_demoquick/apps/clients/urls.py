@@ -2,7 +2,7 @@ from django.urls import path
 
 from . import views
 
-from apps.clients.views import ExportCSVClients
+from apps.clients.views import export_csv
 
 app_name = 'clients_apps'
 
@@ -28,8 +28,8 @@ urlpatterns = [
         views.ClientRetrieveUpdateView.as_view(),
     ),
     path(
-        'clients_csv/', 
-        ExportCSVClients.as_view(), 
+        'exp_clients_csv/', 
+        export_csv, 
         name='clients_csv_export'
     ),
 ]

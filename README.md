@@ -1,12 +1,12 @@
 # demoquick
 Proyecto conocimientos basicos
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 1. Descripción general del proyecto.
 El presente proyecto se desarrola como pruena de conocimientos tecnicos de Django y DRF
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 2. Estado actual del proyecto, que es particularmente importante si el proyecto está todavía en desarrollo. En él se mencionan los cambios planeados y la dirección de desarrollo del proyecto, y se especifica directamente si un proyecto está terminado.
 El proyecto es una DEMO que se encuentra en desarrollo e implementa los requerimientos solicitados y unas cuantas funcionalidades mas.
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 3. Requisitos del entorno de desarrollo para la integración.
 Requiere los siguientes paquetes o programas
 - python 3.8
@@ -14,7 +14,7 @@ Requiere los siguientes paquetes o programas
 - VENV
 - OS Linux
 - Conexion a Internet (Clonar el repositorio)
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 4. Instalación de la Aplicacion o Demo.
 
 -- Proceso de Instalacion de la Aplicacion 
@@ -36,10 +36,10 @@ i. En caso de requerirse aplicar las migraciones
 j. Ejecutar el proyecto
 	$ python manage.py runserver
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 5. Requerimeintos implementados.
-x--------------------------------------------------------------------------------------------------------------------
+
 xxxxxxx Solucion de Requerimientos xxxxxxx
 
 A. Requerimiento: Implementar CRUD de cada entidad.
@@ -67,7 +67,7 @@ c. Para Facturas:
 - http://127.0.0.1:8000/api/bills/delete/<pk>/
 - http://127.0.0.1:8000/api/bills/modify/<pk>/
 
-x----------------------------------------- ---------------------------------------------------------------------------
+
 B. Requerimiento: Un endpoint que permita registrar a un usuario con correo electrónico y contraseña.
 Respuesta: Se implementa el registro de nuevos usuarios.
 a. Ingresar al sistema (http://127.0.0.1:8000/)
@@ -75,7 +75,7 @@ b. Hacer click en "1. Registro en el sistema"
 c. Ingresar Correo Electronico y password (confirmado y validado)
 d. Hacer click en Registrar. El sistema lo redireccionara al endpoint de "Ingrespo al sistema".
 
-x--------------------------------------------------------------------------------------------------------------------
+
 C. Requerimiento: Un endpoint que permita iniciar sesión con el correo electrónico y contraseña previamente creados, generando un JSON Web Token (Ver punto E para el JWT).
 -- Respuesta: 
 a. Una vez registrado en el sistema. ingresar a la pagina de "Ingreso Usuario" (Login)
@@ -84,7 +84,7 @@ c. El sistema lo direccionara a la "Pagina de llegada". Alli se incluiran funcio
 d. Si se intenta llegar a la "Pagina de llegada", el sistema le solicitara el "Ingreso al Sistema" o Login.
 e. Para hacer logout se hace click en "Salir"
 
-x--------------------------------------------------------------------------------------------------------------------
+
 D. Requerimiento: Que los endpoints de entidades estén asegurados por un JSON Web Token recibido desde la cabecera de la petición.
 -- Respuesta: Se protegen los end point mediante JWT. Las url creadas son:
 a. Para Clientes:
@@ -96,7 +96,7 @@ b. Para Productos:
 c. Para Facturas:
 - http://127.0.0.1:8000/api/bills/list/
 
-x--------------------------------------------------------------------------------------------------------------------
+
 E. Registro e ingreso a la API mediante JWT
 Requerimiento: (Editado) Acceder a la API con las credenciales, generando un JSON Web Token.
 -- Respuesta: Usando "POSTMAN"
@@ -113,30 +113,30 @@ f. Seleccionar la opcion "Headers"
 g. En la opcion "KEY" escribir "Authorization" y en la opcion "VALUE" ingresar sin comillas "Bearer Token-access" y "Send".
 
 
-x--------------------------------------------------------------------------------------------------------------------
 F. Requerimiento: Un endpoint que permita realizar la descarga de un archivo CSV con la lista de registros de Cliente: mostrando documento, nombre completo y la cantidad facturas relacionadas.
--- Respuesta: Pendiente
+-- Respuesta: Implementado
+a. Hacer login en el sistema y seleccionar la funcionalidad "Export CSV"
 
-x--------------------------------------------------------------------------------------------------------------------
+
 G. Requerimiento: Un endpoint que permita realizar el cargue de un archivo CSV con resgitros para la creacion de Clientes.
 -- Respuesta: No se Implemento
 
-x--------------------------------------------------------------------------------------------------------------------
+
 H. Requerimiento: Usar el ORM de Django para las consultas de Productos y para el resto usar SQL plano en lo posible
 -- Respuesta: Se implementa consulta con salida json serializada desde la interface del sistema.
 a. Ingresar al sistema mediante en boton "Ingreso al siatema" (http://127.0.0.1:8000/)
 b. Ingresar las credenciales pertinentes
 c. Seleccionar el link "Consulta ORM Products - URL/Json". Se desplegara un Json con la consulta de los productos de la base.
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 6. Bugs conocidos y posibles correcciones de errores.
 A. No se implementa el cargue de archivo CSV
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 7. Preguntas frecuentes.
 No Aplica
 
-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 8. Derechos de autor y licencias.
 Libre uso

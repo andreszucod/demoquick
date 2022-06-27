@@ -25,8 +25,14 @@
                     <h1 class="text-center">Quick Help SAS</h1>
                     <h4 class="text-center">Seleccione Funcionalidad</h4>
                     <div class="card">
-                    
-                      <!-- /.card-body -->
+
+                      <!-- Link export -->
+                      <div>
+                        <a href="{% url 'clients_apps:clients_csv_export' %}" class="list-group-item list-group-item-action">
+                         Export to CSV
+                      </a>
+                      </div>
+                      <!-- Link consulta json -->
                       <div>
                         <a href="{% url 'products_apps:json-product-orm' %}" class="list-group-item list-group-item-action">
                          Consulta ORM Products - URL/Json

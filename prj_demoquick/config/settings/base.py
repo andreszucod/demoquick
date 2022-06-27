@@ -44,6 +44,7 @@ THIRD_APPS = (
     'rest_framework.authtoken',
     # Adiciona la libreria de JWT
     'rest_framework_simplejwt',
+    'import_export',
 )
 
 # Concatena las apps del proyecto

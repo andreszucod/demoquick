@@ -2,8 +2,7 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.auth import authenticate,login,logout
 from django.http import HttpResponseRedirect
 
-#Importar librerias de los Mixin
-from django.contrib.auth.mixins import LoginRequiredMixin
+
 from django.views.generic import View
 from django.views.generic.edit import FormView
 
