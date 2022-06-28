@@ -4,8 +4,7 @@ xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 1. Descripción general del proyecto.
 El presente proyecto se desarrola como pruena de conocimientos tecnicos de Django y DRF
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
-2. Estado actual del proyecto, que es particularmente importante si el proyecto está todavía en desarrollo. En él se mencionan los cambios planeados y la dirección de desarrollo del proyecto, y se especifica directamente si un proyecto está terminado.
-El proyecto es una DEMO que se encuentra en desarrollo e implementa los requerimientos solicitados y unas cuantas funcionalidades mas.
+2. Estado actual del proyecto. El proyecto es una DEMO que se encuentra en desarrollo e implementa los requerimientos solicitados y unas cuantas funcionalidades mas.
 xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 3. Requisitos del entorno de desarrollo para la integración.
 Requiere los siguientes paquetes o programas
